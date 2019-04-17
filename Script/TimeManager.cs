@@ -26,13 +26,13 @@ public class TimeManager : ColorBar
 
         else
         {
-            if (Player_.gameObject.activeSelf)
+            if (Player_.gameObject.activeSelf) // 플레이어가 살아 있다면
             {
-                if (!Player_.IsRightArea(CurrentArea)) return;
+                if (!Player_.IsRightArea(CurrentArea)) return; // 플레이어의 탈락 여부 결정
                 PrevArea = CurrentArea;
-                time_ = timerTime - (Player_.GetScore() / 5);
+                time_ = timerTime - (Player_.GetScore() / 5); // 점수를 얻을 때 마다 시간이 줄어듬
                 do CurrentArea = AreaList[Random.Range(0, AreaList.Length)];
-                    while (PrevArea == CurrentArea);
+                    while (PrevArea == CurrentArea); // 이전 필드와 겹치지 않도록 랜덤 설정
                 MaxTime.text = time_.ToString();
             }
         }

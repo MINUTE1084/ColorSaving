@@ -13,7 +13,7 @@ public class IsometricCameraController : MonoBehaviour {
         forword.y = 0f;
         forword = Vector3.Normalize(forword);
 
-        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forword;
+        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forword; // 대각선 이동
     }
 	
 	// Update is called once per frame

@@ -8,25 +8,10 @@ public class Player : MonoBehaviour {
     int Score = 0;
     public Text scoreText, currentAreaText, currentItemText;
 
-	// Use this for initialization
-	void Start () {
-    }
-	
-	// Update is called once per frame
-	void Update () {
-        
-    }
-
     private void OnCollisionStay(Collision collision)
     {
-        currentArea = collision.collider.tag;
+        currentArea = collision.collider.tag; // 현재 위치 설정
         currentAreaText.text = currentArea;
-    }
-
-    private void OnCollisionItem(Collision collision)
-    {
-        currentItem = collision.collider.tag;
-        currentItemText.text = currentItem.ToString();
     }
 
     public bool IsRightArea(string rightArea)
