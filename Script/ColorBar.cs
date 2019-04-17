@@ -42,6 +42,6 @@ public class ColorBar : MonoBehaviour {
         text.color = new Color32((byte)(255 - Bar.GetComponent<Image>().color.r * 255),
             (byte)(255 - Bar.GetComponent<Image>().color.g * 255),
             (byte)(255 - Bar.GetComponent<Image>().color.b * 255),
-            255);
+            255); // 보색
     }
 }
